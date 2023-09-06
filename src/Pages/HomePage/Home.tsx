@@ -15,6 +15,8 @@ import { Spacer } from '@components/Spacer/Spacer';
 import { DecalsImg } from './Components/DecalsImg';
 import { JfjImg } from './Components/JfjImg';
 import { ZirkelsImg } from './Components/ZirkelsImg';
+import { HeaderContainersColumn } from '@components/Containers/HeaderContainersColumn';
+import { ColumnsXImg } from '@components/ColumnsContainer/ColumnsXImg';
 
 export const Home = () => {
   const textPhrases = ['full stack developer', 'web design', 'graphics design'];
@@ -117,12 +119,26 @@ export const Home = () => {
         <div className="flex justify-center">
           <div className="w-full grid grid-cols-2">
             <TwoColumnsContainer>
-              <ColumnsX>
+              <ColumnsXImg>
                 <DecalsImg />
-              </ColumnsX>
-              <ColumnsX>
+              </ColumnsXImg>
+              <ColumnsXImg>
                 <JfjImg />
-              </ColumnsX>
+              </ColumnsXImg>
+              <div className="col-span-2">
+                <div className="flex justify-center">
+                  <HeaderContainersColumn>
+                    {'{graphic design}'}
+                  </HeaderContainersColumn>
+                </div>
+                <div>
+                  <span>
+                    {
+                      '{//…I am driven by the limitless possibilities of visual communication.With a blend of creativity, technical expertise, and a keen eye for aesthetics, I specialize in bringing ideas to life through stunning design solutions.}'
+                    }
+                  </span>
+                </div>
+              </div>
             </TwoColumnsContainer>
             <div className="flex justify-center w-full pl-24 pr-16 pb-16 pt-8 border-t col-span-1">
               <div className="cols-span-2">
