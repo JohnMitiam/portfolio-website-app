@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        VT323: ['VT323', 'sans-serif'],
       },
       colors: {
         gloriousgold: {
