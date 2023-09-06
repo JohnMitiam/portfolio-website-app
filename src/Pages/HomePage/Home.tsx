@@ -2,21 +2,21 @@ import { useState, useEffect } from 'react';
 
 import { Navigations } from '../Layout/Header/Navigations';
 
+import { DecalsImg } from './Components/DecalsImg';
 import { HomeBanner } from './Components/HomeBanner';
+import { JfjImg } from './Components/JfjImg';
+import { ZirkelsImg } from './Components/ZirkelsImg';
 
 import { ColumnsX } from '@components/ColumnsContainer/ColumnsX';
+import { ColumnsXImg } from '@components/ColumnsContainer/ColumnsXImg';
 import { ColumnsY } from '@components/ColumnsContainer/ColumnsY';
 import { TwoColumnsContainer } from '@components/ColumnsContainer/TwoColumnsContainer';
 import { HeaderContainers } from '@components/Containers/HeaderContainers';
+import { HeaderContainersColumn } from '@components/Containers/HeaderContainersColumn';
 import { SubHeaderContainers } from '@components/Containers/SubHeaderContainers';
 import { ArrowDownIcon } from '@components/HeroIcons/ArrowDownIcon';
 import { CenterButtons } from '@components/PrimaryButtons/CenterButtons';
 import { Spacer } from '@components/Spacer/Spacer';
-import { DecalsImg } from './Components/DecalsImg';
-import { JfjImg } from './Components/JfjImg';
-import { ZirkelsImg } from './Components/ZirkelsImg';
-import { HeaderContainersColumn } from '@components/Containers/HeaderContainersColumn';
-import { ColumnsXImg } from '@components/ColumnsContainer/ColumnsXImg';
 
 export const Home = () => {
   const textPhrases = ['full stack developer', 'web design', 'graphics design'];
