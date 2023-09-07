@@ -14,8 +14,15 @@ import { TwoColumnsContainer } from '@components/ColumnsContainer/TwoColumnsCont
 import { HeaderContainers } from '@components/Containers/HeaderContainers';
 import { HeaderContainersColumn } from '@components/Containers/HeaderContainersColumn';
 import { SubHeaderContainers } from '@components/Containers/SubHeaderContainers';
+import { SubHeaderContainersColumn } from '@components/Containers/SubHeaderContainersColumn';
+import { AboutMeSubText } from '@components/Contents/AboutMeSubText';
+import { GraphisDesignSubTexts } from '@components/Contents/GraphisDesignSubTexts';
+import { PortfolioSubText } from '@components/Contents/PortfolioSubText';
+import { ServicesSubText } from '@components/Contents/ServicesSubText';
+import { WebDesignSubTexts } from '@components/Contents/WebDesignSubTexts';
 import { ArrowDownIcon } from '@components/HeroIcons/ArrowDownIcon';
 import { CenterButtons } from '@components/PrimaryButtons/CenterButtons';
+import { Space } from '@components/Spacer/Space';
 import { Spacer } from '@components/Spacer/Spacer';
 
 export const Home = () => {
@@ -86,8 +93,7 @@ export const Home = () => {
         <Spacer>{'{/}'}</Spacer>
         <HeaderContainers>{'<about_me>'}</HeaderContainers>
         <SubHeaderContainers>
-          …Embracing Curiosity, Igniting Creativity, and Inspiring Connection
-          for a Transformed World.
+          <AboutMeSubText />
         </SubHeaderContainers>
 
         <TwoColumnsContainer>
@@ -113,11 +119,10 @@ export const Home = () => {
         <Spacer>{'(!)'}</Spacer>
         <HeaderContainers>{'<portfolio>'}</HeaderContainers>
         <SubHeaderContainers>
-          …Elevating Possibilities through Technology: Showcasing Innovation,
-          Expertise, and Impact.
+          <PortfolioSubText />
         </SubHeaderContainers>
         <div className="flex justify-center">
-          <div className="w-full grid grid-cols-2">
+          <div className="w-full grid grid-cols-2 border-y">
             <TwoColumnsContainer>
               <ColumnsXImg>
                 <DecalsImg />
@@ -126,24 +131,62 @@ export const Home = () => {
                 <JfjImg />
               </ColumnsXImg>
               <div className="col-span-2">
-                <div className="flex justify-center">
-                  <HeaderContainersColumn>
-                    {'{graphic design}'}
-                  </HeaderContainersColumn>
-                </div>
-                <div>
-                  <span>
-                    {
-                      '{//…I am driven by the limitless possibilities of visual communication.With a blend of creativity, technical expertise, and a keen eye for aesthetics, I specialize in bringing ideas to life through stunning design solutions.}'
-                    }
-                  </span>
-                </div>
+                <HeaderContainersColumn>
+                  {'{graphic design}'}
+                </HeaderContainersColumn>
+
+                <SubHeaderContainersColumn>
+                  <GraphisDesignSubTexts />
+                </SubHeaderContainersColumn>
               </div>
             </TwoColumnsContainer>
-            <div className="flex justify-center w-full pl-24 pr-16 pb-16 pt-8 border-t col-span-1">
+            <div className="flex justify-center w-full pl-24 pr-16 pb-16 pt-8">
               <div className="cols-span-2">
-                <ZirkelsImg />
+                <div className="flex justify-center">
+                  <ZirkelsImg />
+                </div>
+                <div className="col-span-2 pt-20">
+                  <HeaderContainersColumn>
+                    {'{web design}'}
+                  </HeaderContainersColumn>
+
+                  <SubHeaderContainersColumn>
+                    <WebDesignSubTexts />
+                  </SubHeaderContainersColumn>
+                </div>
               </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <Spacer>{'{#}'}</Spacer>
+          <HeaderContainers>{'<services>'}</HeaderContainers>
+          <SubHeaderContainers>
+            <ServicesSubText />
+          </SubHeaderContainers>
+          <div className="text-center mx-56">
+            <div className="flex justify-center">
+              <span className="text-white text-8xl hover:bg-[#e6db74] space-x-4 border w-full py-16">
+                <span className="">{'{ "'}</span>
+                <span className="text-[#7642B7]">graphics design</span>
+                <span>{'" }'}</span>
+              </span>
+            </div>
+            <Space />
+            <div className="flex justify-center ">
+              <span className="text-white text-8xl hover:bg-[#e6db74] space-x-4 border w-full py-16">
+                <span className="">{'{ "'}</span>
+                <span className="text-[#5ed7ff]">web design</span>
+                <span>{'" }'}</span>
+              </span>
+            </div>
+            <Space />
+            <div className="flex justify-center ">
+              <span className="text-white text-8xl hover:bg-[#e6db74] space-x-4 border w-full py-16">
+                <span className="">{'{ "'}</span>
+                <span className="text-[#e6db74]">full stack developer</span>
+                <span>{'" }'}</span>
+              </span>
             </div>
           </div>
         </div>
