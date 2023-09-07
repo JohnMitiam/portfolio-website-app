@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 
-import { Navigations } from '../Layout/Header/Navigations';
+import { FooterNavigations } from '../Layout/Footer/FooterNavigations';
+import { Header } from '../Layout/Header/Header';
 
 import { DecalsImg } from './Components/DecalsImg';
 import { HomeBanner } from './Components/HomeBanner';
+import { HomeFooterBanner } from './Components/HomeFooterBanner';
 import { JfjImg } from './Components/JfjImg';
 import { ZirkelsImg } from './Components/ZirkelsImg';
 
@@ -11,8 +13,10 @@ import { ColumnsX } from '@components/ColumnsContainer/ColumnsX';
 import { ColumnsXImg } from '@components/ColumnsContainer/ColumnsXImg';
 import { ColumnsY } from '@components/ColumnsContainer/ColumnsY';
 import { TwoColumnsContainer } from '@components/ColumnsContainer/TwoColumnsContainer';
+import { ContactMe } from '@components/ContactUS/ContactMe';
 import { HeaderContainers } from '@components/Containers/HeaderContainers';
 import { HeaderContainersColumn } from '@components/Containers/HeaderContainersColumn';
+import { MainContentContainer } from '@components/Containers/MainContentContainer';
 import { SubHeaderContainers } from '@components/Containers/SubHeaderContainers';
 import { SubHeaderContainersColumn } from '@components/Containers/SubHeaderContainersColumn';
 import { AboutMeSubText } from '@components/Contents/AboutMeSubText';
@@ -62,10 +66,119 @@ export const Home = () => {
     return () => clearInterval(typingIntervalId);
   }, [currentIndex, currentPhraseIndex, isPausing]);
 
+  // Graphics Design
+  const graphicsDesignPhrase = ['graphics design'];
+  const [graphicsDesign, setGraphicsDesign] = useState('');
+  const [currentGraphicsPhraseIndex] = useState(0);
+  const [currentGraphicsIndex, setCurrentGraphicsIndex] = useState(0);
+  const [isPausingGraphics, setIsPausingGraphicsIndex] = useState(false);
+
+  useEffect(() => {
+    const typingInterval = 175;
+    const pauseDuration = 800;
+
+    const typedGraphicsDesign = () => {
+      if (currentGraphicsIndex < graphicsDesignPhrase[0].length) {
+        setGraphicsDesign(
+          (prevGraphicsDesignText) =>
+            prevGraphicsDesignText +
+            graphicsDesignPhrase[0][currentGraphicsIndex]
+        );
+        setCurrentGraphicsIndex(currentGraphicsIndex + 1);
+      } else {
+        setIsPausingGraphicsIndex(true);
+
+        setTimeout(() => {
+          setGraphicsDesign('');
+          setCurrentGraphicsIndex(0);
+
+          setIsPausingGraphicsIndex(false);
+        }, pauseDuration);
+      }
+    };
+
+    const typingIntervalId = setInterval(typedGraphicsDesign, typingInterval);
+
+    return () => clearInterval(typingIntervalId);
+  }, [currentGraphicsIndex, currentGraphicsPhraseIndex, isPausingGraphics]);
+  // Graphics Design
+
+  // Web Design
+  const webDesignPhrase = ['web design'];
+  const [webDesign, setWebDesign] = useState('');
+  const [currentWebPhraseIndex] = useState(0);
+  const [currentWebIndex, setCurrentWebIndex] = useState(0);
+  const [isPausingWeb, setIsPausingWeb] = useState(false);
+
+  useEffect(() => {
+    const typingInterval = 175;
+    const pauseDuration = 800;
+
+    const typedWebDesign = () => {
+      if (currentWebIndex < webDesignPhrase[0].length) {
+        setWebDesign(
+          (prevWebDesignText) =>
+            prevWebDesignText + webDesignPhrase[0][currentWebIndex]
+        );
+        setCurrentWebIndex(currentWebIndex + 1);
+      } else {
+        setIsPausingWeb(true);
+
+        setTimeout(() => {
+          setWebDesign('');
+          setCurrentWebIndex(0);
+
+          setIsPausingWeb(false);
+        }, pauseDuration);
+      }
+    };
+
+    const typingIntervalId = setInterval(typedWebDesign, typingInterval);
+
+    return () => clearInterval(typingIntervalId);
+  }, [currentWebIndex, currentWebPhraseIndex, isPausingWeb]);
+  // Web Design
+
+  // Full Stack
+  const fullStackPhrase = ['full stack developer'];
+  const [fullStack, setFullStack] = useState('');
+  const [currentfullStackPhraseIndex] = useState(0);
+  const [currentFullStackIndex, setCurrentFullStackIndex] = useState(0);
+  const [isPausingFullStack, setIsPausingFullStack] = useState(false);
+
+  useEffect(() => {
+    const typingInterval = 175;
+    const pauseDuration = 800;
+
+    const typedFullStack = () => {
+      if (currentFullStackIndex < fullStackPhrase[0].length) {
+        setFullStack(
+          (prevFullStackText) =>
+            prevFullStackText + fullStackPhrase[0][currentFullStackIndex]
+        );
+        setCurrentFullStackIndex(currentFullStackIndex + 1);
+      } else {
+        setIsPausingFullStack(true);
+
+        setTimeout(() => {
+          setFullStack('');
+          setCurrentFullStackIndex(0);
+
+          setIsPausingFullStack(false);
+        }, pauseDuration);
+      }
+    };
+
+    const typingIntervalId = setInterval(typedFullStack, typingInterval);
+
+    return () => clearInterval(typingIntervalId);
+  }, [currentFullStackIndex, currentfullStackPhraseIndex, isPausingFullStack]);
+  // Full Stack
+
   return (
     <>
-      <Navigations />
-      <div className="space-y-2 font-VT323">
+      <Header />
+      <MainContentContainer>
         <div className="space-y-2">
           <div className="flex justify-center">
             <span className="text-white text-xl">HI I AM JOHN, A . . .</span>
@@ -164,11 +277,11 @@ export const Home = () => {
           <SubHeaderContainers>
             <ServicesSubText />
           </SubHeaderContainers>
-          <div className="text-center mx-56">
+          <div className="text-center mx-44">
             <div className="flex justify-center">
               <span className="text-white text-8xl hover:bg-[#e6db74] space-x-4 border w-full py-16">
                 <span className="">{'{ "'}</span>
-                <span className="text-[#7642B7]">graphics design</span>
+                <span className="text-[#7642B7]">{graphicsDesign}</span>
                 <span>{'" }'}</span>
               </span>
             </div>
@@ -176,7 +289,7 @@ export const Home = () => {
             <div className="flex justify-center ">
               <span className="text-white text-8xl hover:bg-[#7642B7] space-x-4 border w-full py-16">
                 <span className="">{'{ "'}</span>
-                <span className="text-[#5ed7ff]">web design</span>
+                <span className="text-[#5ed7ff]">{webDesign}</span>
                 <span>{'" }'}</span>
               </span>
             </div>
@@ -184,13 +297,21 @@ export const Home = () => {
             <div className="flex justify-center ">
               <span className="text-white text-8xl hover:bg-[#5ed7ff] space-x-4 border w-full py-16">
                 <span className="">{'{ "'}</span>
-                <span className="text-[#e6db74]">full stack developer</span>
+                <span className="text-[#e6db74]">{fullStack}</span>
                 <span>{'" }'}</span>
               </span>
             </div>
           </div>
         </div>
-      </div>
+        <Space />
+        <HomeFooterBanner />
+        <div className="pt-4">
+          <CenterButtons to={''}>{'{all_services}'}</CenterButtons>
+        </div>
+        <Spacer>{'{*}'}</Spacer>
+        <ContactMe />
+      </MainContentContainer>
+      <FooterNavigations />
     </>
   );
 };

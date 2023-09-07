@@ -1,9 +1,9 @@
-import { Navigations } from '../Layout/Header/Navigations';
+import { Header } from '../Layout/Header/Header';
 
 export const Resume = () => {
   return (
     <>
-      <Navigations />
+      <Header />
       <div>this is the ResumePage</div>
     </>
   );
