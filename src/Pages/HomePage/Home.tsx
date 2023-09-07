@@ -158,7 +158,7 @@ export const Home = () => {
             </div>
           </div>
         </div>
-        <div>
+        <div className="pb-28">
           <Spacer>{'{#}'}</Spacer>
           <HeaderContainers>{'<services>'}</HeaderContainers>
           <SubHeaderContainers>
