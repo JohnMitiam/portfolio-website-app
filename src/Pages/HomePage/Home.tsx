@@ -1,13 +1,7 @@
 import { useState, useEffect } from 'react';
 
-import { FooterNavigations } from '../Layout/Footer/FooterNavigations';
+import { Footer } from '../Layout/Footer/Footer';
 import { Header } from '../Layout/Header/Header';
-
-import { DecalsImg } from './Components/DecalsImg';
-import { HomeBanner } from './Components/HomeBanner';
-import { HomeFooterBanner } from './Components/HomeFooterBanner';
-import { JfjImg } from './Components/JfjImg';
-import { ZirkelsImg } from './Components/ZirkelsImg';
 
 import { ColumnsX } from '@components/ColumnsContainer/ColumnsX';
 import { ColumnsXImg } from '@components/ColumnsContainer/ColumnsXImg';
@@ -19,8 +13,14 @@ import { HeaderContainersColumn } from '@components/Containers/HeaderContainersC
 import { MainContentContainer } from '@components/Containers/MainContentContainer';
 import { SubHeaderContainers } from '@components/Containers/SubHeaderContainers';
 import { SubHeaderContainersColumn } from '@components/Containers/SubHeaderContainersColumn';
+import { TitleAnimation } from '@components/Containers/TitleAnimation';
 import { AboutMeSubText } from '@components/Contents/AboutMeSubText';
 import { GraphisDesignSubTexts } from '@components/Contents/GraphisDesignSubTexts';
+import { DecalsImg } from '@components/Contents/Images/DecalsImg';
+import { HomeBanner } from '@components/Contents/Images/HomeBanner';
+import { HomeFooterBanner } from '@components/Contents/Images/HomeFooterBanner';
+import { JfjImg } from '@components/Contents/Images/JfjImg';
+import { ZirkelsImg } from '@components/Contents/Images/ZirkelsImg';
 import { PortfolioSubText } from '@components/Contents/PortfolioSubText';
 import { ServicesSubText } from '@components/Contents/ServicesSubText';
 import { WebDesignSubTexts } from '@components/Contents/WebDesignSubTexts';
@@ -180,16 +180,10 @@ export const Home = () => {
       <Header />
       <MainContentContainer>
         <div className="space-y-2">
-          <div className="flex justify-center">
-            <span className="text-white text-xl">HI I AM JOHN, A . . .</span>
+          <div className="flex justify-center pb-8">
+            <span className="text-white text-2xl">HI I AM JOHN, A . . .</span>
           </div>
-          <div className="flex justify-center">
-            <span className="text-[#e6db74] text-8xl space-x-4">
-              <span className="">{'{ "'}</span>
-              <span className="text-white">{typedText}</span>
-              <span>{'" }'}</span>
-            </span>
-          </div>
+          <TitleAnimation>{typedText}</TitleAnimation>
         </div>
         <div>
           <span className="flex justify-center font-bold text-white text-xl">
@@ -311,7 +305,7 @@ export const Home = () => {
         <Spacer>{'{*}'}</Spacer>
         <ContactMe />
       </MainContentContainer>
-      <FooterNavigations />
+      <Footer />
     </>
   );
 };

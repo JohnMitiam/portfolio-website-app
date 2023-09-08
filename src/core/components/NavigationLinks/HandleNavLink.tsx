@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom';
 
 interface Props {
   to: string;
+  onClick: any;
   children?: React.ReactNode;
-  onClick?: any;
 }
 
-export const NavigationLinks: React.FC<Props> = ({ onClick, children, to }) => {
+export const HandleNavLink: React.FC<Props> = ({ to, onClick, children }) => {
   return (
     <Link className="" onClick={onClick} to={to}>
       {children}

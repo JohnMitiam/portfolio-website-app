@@ -1,10 +1,10 @@
-import Banner from './Banner.png';
+import FooterBanner from './FooterBanner.png';
 
-export const HomeBanner = () => {
-  const overlayColor = 'rgba(0, 0, 0, 0.5)';
+export const HomeFooterBanner = () => {
+  const overlayColor = 'rgba(0, 0, 100, 0.5)';
 
   const divStyle = {
-    backgroundImage: `linear-gradient(${overlayColor}, ${overlayColor}), url(${Banner})`,
+    backgroundImage: `linear-gradient(${overlayColor}, ${overlayColor}), url(${FooterBanner})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
