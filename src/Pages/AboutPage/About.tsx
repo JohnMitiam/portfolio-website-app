@@ -3,20 +3,17 @@ import { useState, useEffect } from 'react';
 import { Footer } from '../Layout/Footer/Footer';
 import { Header } from '../Layout/Header/Header';
 
+import { FourXFourColumn } from '@components/ColumnsContainer/FourXFourColumn';
+import { ContactMe } from '@components/ContactUS/ContactMe';
+import { HeaderContainers } from '@components/Containers/HeaderContainers';
 import { MainContentContainer } from '@components/Containers/MainContentContainer';
 import { SubTitleContainers } from '@components/Containers/SubTitleContainers';
 import { TitleAnimationPages } from '@components/Containers/TitleAnimationPages';
 import { AboutMeSubText } from '@components/Contents/AboutMeSubText';
 import { HomeBanner } from '@components/Contents/Images/HomeBanner';
-import { HeaderContainers } from '@components/Containers/HeaderContainers';
-import { TwoColumnsContainer } from '@components/ColumnsContainer/TwoColumnsContainer';
-import { ColumnsX } from '@components/ColumnsContainer/ColumnsX';
-import { ColumnsY } from '@components/ColumnsContainer/ColumnsY';
-import { Space } from '@components/Spacer/Space';
-import { FourXFourColumn } from '@components/ColumnsContainer/FourXFourColumn';
 import { HomeFooterBanner } from '@components/Contents/Images/HomeFooterBanner';
+import { Space } from '@components/Spacer/Space';
 import { Spacer } from '@components/Spacer/Spacer';
-import { ContactMe } from '@components/ContactUS/ContactMe';
 
 export const About = () => {
   const aboutMePhrase = ['about_me'];
