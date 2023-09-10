@@ -66,10 +66,10 @@ export const Resume = () => {
         </SubHeaderContainers>
         <></>
         <TwoColumnsContainer>
-          <div className="w-full col-span-1 border-t">
+          <div className="w-full col-span-1 border-t border-r">
             <div className="grid grid-cols-3 pt-2">
               <DateContent startDate={'{Dec. 2018}'} endDate={'{June 2023}'} />
-              <div className="col-span-2 text-end border-t pr-8 py-24 border-red-500">
+              <div className="col-span-2 text-end pr-8 py-24 border-red-500">
                 <span className="text-4xl text-[#7642B7]">
                   {'< havis jade construction inc. >'}
                 </span>
