@@ -1,23 +1,25 @@
-import Banner from './Banner.png';
+import { BannerImg } from './BannerImg';
 
 export const HomeBanner = () => {
   const overlayColor = 'rgba(0, 0, 100, 0.5)';
 
   const divStyle = {
-    backgroundImage: `linear-gradient(${overlayColor}, ${overlayColor}), url(${Banner})`,
+    backgroundImage: `linear-gradient(${overlayColor}, ${overlayColor})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
     backgroundAttachment: 'fixed',
     width: '100%',
-    height: '400px',
+    height: '100%',
     position: 'relative',
   };
 
   return (
     <>
       <div className="px-28">
-        <div style={divStyle} />
+        <div style={divStyle} className="fixed">
+          <BannerImg />
+        </div>
       </div>
     </>
   );
