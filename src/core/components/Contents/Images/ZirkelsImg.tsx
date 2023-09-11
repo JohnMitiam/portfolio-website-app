@@ -1,5 +1,3 @@
-import Zirkels from './Zirkels.png';
-
 export const ZirkelsImg = () => {
   return (
     <>
