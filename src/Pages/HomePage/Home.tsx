@@ -297,7 +297,6 @@ export const Home = () => {
             </div>
           </div>
         </div>
-        <Space />
         <HomeFooterBanner />
         <div className="pt-4">
           <CenterButtons to={''}>{'{all_services}'}</CenterButtons>

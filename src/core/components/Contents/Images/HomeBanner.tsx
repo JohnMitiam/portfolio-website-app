@@ -1,24 +1,15 @@
 import { BannerImg } from './BannerImg';
+import './Paralax.css';
 
 export const HomeBanner = () => {
-  const overlayColor = 'rgba(0, 0, 100, 0.5)';
-
-  const divStyle = {
-    backgroundImage: `linear-gradient(${overlayColor}, ${overlayColor})`,
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-    backgroundAttachment: 'fixed',
-    width: '100%',
-    height: '100%',
-    position: 'relative',
-  };
-
   return (
     <>
-      <div className="px-28">
-        <div style={divStyle} className="fixed">
-          <BannerImg />
+      <div className="px-28 ">
+        <div className="header-container">
+          <div className="relative">
+            <BannerImg />
+            <div className="parallax-overlay" />
+          </div>
         </div>
       </div>
     </>
