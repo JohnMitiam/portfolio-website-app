@@ -1,17 +1,15 @@
 .footer-container {
   position: relative;
-  width: 100%;
-  height: 100%;
+  background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
 }
 
 .header-container {
   position: relative;
-  width: 100%;
-  height: 100%;
-  background-attachment: fixed;
   background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .parallax-overlay {

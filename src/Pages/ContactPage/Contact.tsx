@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import { useEffect, useState } from 'react';
 
 import { Footer } from '../Layout/Footer/Footer';
@@ -6,7 +7,9 @@ import { Header } from '../Layout/Header/Header';
 import { ContactMain } from '@components/ContactUS/ContactMain';
 import { MainContentContainer } from '@components/Containers/MainContentContainer';
 import { TitleAnimationPages } from '@components/Containers/TitleAnimationPages';
+import { HomeBanner } from '@components/Contents/Images/HomeBanner';
 import { Space } from '@components/Spacer/Space';
+import { Spacer } from '@components/Spacer/Spacer';
 
 export const Contact = () => {
   const mainTextPhrase = ['contact_me'];
@@ -48,6 +51,7 @@ export const Contact = () => {
       <Header />
       <MainContentContainer>
         <TitleAnimationPages>{mainText}</TitleAnimationPages>
+
         <Space />
         <div className="flex justify-center">
           <span className="text-2xl text-[#e6db74]">
@@ -60,6 +64,8 @@ export const Contact = () => {
           <span className="text-2xl text-[#e6db74]">{'//Contact Me!'}</span>
         </div>
         <Space />
+        <HomeBanner />
+        <Spacer>{'(#)'}</Spacer>
         <ContactMain />
       </MainContentContainer>
       <Footer />

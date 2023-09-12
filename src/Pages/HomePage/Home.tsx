@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import { useState, useEffect } from 'react';
 
 import { Footer } from '../Layout/Footer/Footer';
