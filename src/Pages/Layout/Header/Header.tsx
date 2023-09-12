@@ -55,7 +55,7 @@ export const Header = () => {
             to="/contact-me"
           >
             <div className={`${activeNavigationLinkClass('contact')}`}>
-              _contact
+              _contact me
             </div>
           </NavigationLinks>
         </div>

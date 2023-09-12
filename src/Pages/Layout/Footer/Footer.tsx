@@ -52,7 +52,7 @@ export const Footer = () => {
           to="/contact-me"
         >
           <div className={`${activeNavigationLinkClass('contact')}`}>
-            _contact
+            _contact me
           </div>
         </NavigationLinks>
       </div>
