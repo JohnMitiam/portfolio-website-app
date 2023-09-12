@@ -3,11 +3,9 @@ import { useEffect, useState } from 'react';
 import { Footer } from '../Layout/Footer/Footer';
 import { Header } from '../Layout/Header/Header';
 
+import { ContactMain } from '@components/ContactUS/ContactMain';
 import { MainContentContainer } from '@components/Containers/MainContentContainer';
 import { TitleAnimationPages } from '@components/Containers/TitleAnimationPages';
-import { TextAreaInput } from '@components/Inputs/TextAreaInput';
-import { TextInput } from '@components/Inputs/TextInput';
-import { ContactMeButtons } from '@components/PrimaryButtons/ContactMeButtons';
 import { Space } from '@components/Spacer/Space';
 
 export const Contact = () => {
@@ -45,11 +43,6 @@ export const Contact = () => {
     return () => clearInterval(typingIntervalId);
   }, [currentMainTextIndex, currentMainTextPhraseIndex, isPausingMainText]);
 
-  const handleSendButton = () => {
-    ('');
-    console.log();
-  };
-
   return (
     <>
       <Header />
@@ -67,29 +60,7 @@ export const Contact = () => {
           <span className="text-2xl text-[#e6db74]">{'//Contact Me!'}</span>
         </div>
         <Space />
-        <TextInput
-          value=""
-          // onChange={handleInputChange}
-          name="_name"
-          label="_name"
-          type="text"
-        />
-        <TextInput
-          name="_email"
-          label="_email"
-          type="email"
-          value=""
-          // onChange={handleInputChange}
-        />
-        <TextAreaInput
-          label="_message"
-          rows={2}
-          value=""
-          // onChange={handleInputChange}
-        />
-        <ContactMeButtons onClick={handleSendButton} type="submit">
-          {'{send}'}
-        </ContactMeButtons>
+        <ContactMain />
       </MainContentContainer>
       <Footer />
     </>
