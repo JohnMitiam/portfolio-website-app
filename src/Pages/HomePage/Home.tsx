@@ -272,9 +272,9 @@ export const Home = () => {
           <SubHeaderContainers>
             <ServicesSubText />
           </SubHeaderContainers>
-          <div className="text-center mx-44">
+          <div className="text-center mx-28">
             <div className="flex justify-center">
-              <span className="text-white text-8xl hover:bg-[#e6db74] space-x-4 border w-full py-16">
+              <span className="text-white text-8xl hover:bg-[#e6db74] space-x-4 border w-full py-8">
                 <span className="">{'{ "'}</span>
                 <span className="text-[#7642B7]">{graphicsDesign}</span>
                 <span>{'" }'}</span>
@@ -282,7 +282,7 @@ export const Home = () => {
             </div>
             <Space />
             <div className="flex justify-center ">
-              <span className="text-white text-8xl hover:bg-[#7642B7] space-x-4 border w-full py-16">
+              <span className="text-white text-8xl hover:bg-[#7642B7] space-x-4 border w-full py-8">
                 <span className="">{'{ "'}</span>
                 <span className="text-[#5ed7ff]">{webDesign}</span>
                 <span>{'" }'}</span>
@@ -290,7 +290,7 @@ export const Home = () => {
             </div>
             <Space />
             <div className="flex justify-center ">
-              <span className="text-white text-8xl hover:bg-[#5ed7ff] space-x-4 border w-full py-16">
+              <span className="text-white text-8xl hover:bg-[#5ed7ff] space-x-4 border w-full py-8">
                 <span className="">{'{ "'}</span>
                 <span className="text-[#e6db74]">{fullStack}</span>
                 <span>{'" }'}</span>
