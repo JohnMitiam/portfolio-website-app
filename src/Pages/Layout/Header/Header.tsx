@@ -20,7 +20,7 @@ export const Header = () => {
 
   return (
     <>
-      <div className="flex justify-between px-52 font-VT323">
+      <div className="flex fixed py-6 bg-[#222325] z-50	w-full justify-between px-52 font-VT323">
         <div>
           <MyLogo />
         </div>

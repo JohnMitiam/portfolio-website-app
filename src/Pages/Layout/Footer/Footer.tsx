@@ -22,7 +22,7 @@ export const Footer = () => {
       : 'text-md text-[#e6db74] hover:text-[#6EC1E4]';
 
   return (
-    <div className="flex justify-between px-44 py-8">
+    <div className="flex justify-between px-44 py-8 ">
       <div className="space-x-4 flex">
         <NavigationLinks
           onClick={() => handleActiveNavigationLink('home')}

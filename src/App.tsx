@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 const App: React.FC = () => {
   return (
     <>
-      <div className="py-6 bg-[#222325]">
+      <div className="bg-[#222325]">
         <Outlet />
       </div>
     </>
